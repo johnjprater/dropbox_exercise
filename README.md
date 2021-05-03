@@ -1,21 +1,30 @@
 # Dropbox Exercise
 
 ## Getting Started
-Dockerized to avoid the headache of developing on windows. Make sure you have docker installed. To spin up the container run:
+This has been developed on Windows for Python 3.9.4, and has not been tested on other platforms.
+
+Spin up the server first using the following command:
 ```
-docker build -t dropbox_exercise C:\Users\pc\OneDrive\Appliations\dropbox_exercise\
-docker run -it -v C:\Users\pc\OneDrive\Appliations\dropbox_exercise:/usr/src/app dropbox_exercise
-docker build -t dropbox_exercise <location of cloned repo>\dropbox_exercise\
-docker run -it -v <location of cloned repo>\dropbox_exercise:/usr/src/app dropbox_exercise 
+python dropbox/server.py <destination directory>
 ```
 
-To run the client use the following command:
+Then run the client using the following command:
 ```
-python3 dropbox/client.py <source directory>
+python dropbox/client.py <source directory>
 ```
+
 
 ### Unit Tests
-To run the unit tests call `pytest`. To do this for a particular file, run:
+To run the unit tests call:
 ```
-pytest -k <name of test file>
+python .\unit_tests\test_server.py
+python .\unit_tests\test_client.py
+
 ```
+
+There is also an integration test of some sort, which can be run with:
+```
+python .\integration_test.py
+```
+
+I've spent an afternoon, and a seperate evening on this, not sure about number of hours - maybe 8.

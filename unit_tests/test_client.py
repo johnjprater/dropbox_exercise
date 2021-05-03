@@ -3,7 +3,7 @@ sys.path.append('dropbox')
 from client import SourceMonitor
 
 
-TEST_SOURCE = 'unit_tests/test_source/'
+TEST_SRC = 'unit_tests/test_source'
 
 
 class TestSourceMonitor():
@@ -11,8 +11,13 @@ class TestSourceMonitor():
 
     def test__init__(self):
         ''' Check __init__ '''
-        # Relative path from where pytest and the app is run.
-        assert SourceMonitor(TEST_SOURCE).source_dir == TEST_SOURCE
-        # Should also accept an absolute path
-        assert SourceMonitor('/home').source_dir == '/home'
+        assert SourceMonitor(TEST_SRC).src_dir == TEST_SRC
 
+if __name__ == '__main__':
+    TestSourceMonitor().test__init__()
+    # TODO: write a unit test for SourceMonitor.
+    # I didn't want to spend time doing this because:
+    # - I was already close to going outside the scope of a 'coding test'. Unit testing the client
+    # is non-trivial as I'd probably want to use the python unit test framework and mock out 
+    # requests.
+    # - the client is implicitly tested to some degree in the integration test.
