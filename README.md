@@ -1,7 +1,11 @@
 # Dropbox Exercise
 
 ## Getting Started
-This has been developed on Windows for Python 3.9.4, and has not been tested on other platforms.
+This has been developed on Windows for Python 3.9, and has not been well-tested on other platforms.
+You probably need to install the python `requests` module:
+```
+pip install requests
+```
 
 Spin up the server first using the following command (from `<location of cloned repo>/dropbox_exercise`):
 ```
