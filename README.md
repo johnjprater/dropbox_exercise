@@ -2,10 +2,7 @@
 
 ## Getting Started
 This has been developed on Windows for Python 3.9, and has not been well-tested on other platforms.
-You probably need to install the python `requests` module:
-```
-pip install requests
-```
+You probably need to install the python `requests` module with the command: `pip install requests`
 
 Spin up the server first using the following command (from `<location of cloned repo>/dropbox_exercise`):
 ```
